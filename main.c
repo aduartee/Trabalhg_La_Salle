@@ -20,10 +20,8 @@ int main() {
   if (choice == 1) { /// Se o valor de escolha for igual a 1, executa o codigo abaixo
     printf("Digite o numero: ");
     scanf("%f", &nraiz); /// Lê o primeiro numero digitado
-    total = sqrt(nraiz); /// O metodo sqrt realiza a raiz quadrada de qualquer
-                         /// valor que estiver dentro do parenteses
-    printf("O resultado foi: %f",
-           total); /// Printa o resultado, referenciando a variavel que está
+    total = sqrt(nraiz); /// O metodo sqrt realiza a raiz quadrada de qualquer valor que estiver dentro do parenteses
+    printf("O resultado foi: %f",total); /// Printa o resultado, referenciando a variavel que está
                    /// armazenando a resposta
   }
   if (choice == 2) { // Se o valor de escolha for igual a 2, executa o codigo abaixo
@@ -41,11 +39,12 @@ int main() {
     printf("Digite o segundo valor:");
     scanf("%d", &numero2); /// Lê o segundo numero digitado
 
-    if (numero1 > numero2) { /// Se o primeiro numero for maior que o segundo
+    if (numero1 > numero2) { /// Se o primeiro numero for menor que o segundo
                              /// realiza a subtração
       subtrai = numero1 - numero2; /// Guardando o resultado em uma variavel
       printf("O resultado foi: %d", subtrai); /// Exibindo na tela o resultado
-    } else { /// Caso o primeiro numero for maior que o segundo mostra mensagem
+    } 
+    else { /// Caso o primeiro numero for maior que o segundo mostra mensagem
              /// a abaixo
       printf("O primeiro numero não pode ser menor que o segundo !");
     }
@@ -56,8 +55,7 @@ int main() {
     scanf("%d", &numero1); /// Lê o primeiro numero digitado
     printf("Digite o segundo valor:");
     scanf("%d", &numero2); /// Lê o segundo numero digitado
-    mult = numero1 *
-           numero2; /// Realiza a multiplicação dos dois numeros digitados
+    mult = numero1 * numero2; /// Realiza a multiplicação dos dois numeros digitados
     printf("O resultado foi: %d", mult); /// Printa na tela o resultado
   }
 
@@ -66,7 +64,12 @@ int main() {
     scanf("%d", &numero1); /// Lê o primeiro numero digitado
     printf("Digite o segundo valor:");
     scanf("%d", &numero2);    /// Lê o segundo numero digitado
-    divi = numero1 / numero2; /// Realiza a divisão dos dois numeros digitados
-    printf("O resultado foi: %f", divi); /// Printa na tela o resultado
+     if (numero1 == 0) { /// Se o primeiro numero for igual a zero
+      printf("Não é possivel realizar divisão por zero");
   }
+     else { /// Caso o primeiro numero for maior que o segundo mostra mensagem
+      divi = numero1 / numero2; /// Realiza a divisão dos dois numeros digitados
+    printf("O resultado foi: %f", divi); /// Printa na tela o resultado
+    }
+}
 }
